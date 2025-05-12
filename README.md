@@ -1,9 +1,11 @@
-# Machine Learning Debugging Workshop
+# Machine Learning Debugging Workshop 🐞
 Welcome! This repository contains the code for the two cases you will work on during the workshop.
 
-Make sure you follow all the installation instructions in good time **before** the workshop (especially if you're on Windows, I only tested this on a Mac 😅).
+Make sure you follow all the installation instructions in good time **before** the workshop (especially if you're on Windows, I only tested this on a Mac 😅). 
 
 If you run into any problems open an issue in this repo and I'll do my best to answer asap.
+
+Try your best not to look at the cases 🙈, leave that for the workshop. It's best that we all start from the same point then!
 
 
 # Installation instructions
