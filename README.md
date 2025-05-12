@@ -9,7 +9,6 @@ Try your best not to look at the cases 🙈, leave that for the workshop. It's b
 
 
 # Installation instructions
----
 Note: If installing the project on a Windows machine, I recommend using [Git Bash](https://gitforwindows.org/#:~:text=and%20novices%20alike.-,Git%20BASH,-Git%20for%20Windows)
 
 Clone this repository and move inside it:
