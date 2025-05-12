@@ -8,6 +8,8 @@ If you run into any problems open an issue in this repo and I'll do my best to a
 
 # Installation instructions
 ---
+Note: If installing the project on a Windows machine, I recommend using [Git Bash](https://gitforwindows.org/#:~:text=and%20novices%20alike.-,Git%20BASH,-Git%20for%20Windows)
+
 Clone this repository and move inside it:
 ```
 git clone https://github.com/JulianoLagana/debugging_workshop.git
@@ -23,7 +25,6 @@ Install Poetry using the [official installer](https://python-poetry.org/docs/#in
 ```
 curl -sSL https://install.python-poetry.org | python3 -
 ```
-
 
 Install the project
 ```
