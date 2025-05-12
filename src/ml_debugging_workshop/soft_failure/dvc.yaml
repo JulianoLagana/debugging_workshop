@@ -1,0 +1,30 @@
+stages:
+  preprocess:
+    wdir: .
+    cmd: python preprocessing.py
+    deps:
+    - mushrooms.csv
+    - preprocessing.py
+    outs:
+    - splits/train.csv
+    - splits/val.csv
+    - splits/test.csv
+
+  train:
+    wdir: .
+    cmd: python train.py fit --config train_config.yaml
+    deps:
+    - splits/train.csv
+    - splits/val.csv
+    - train.py
+    - train_config.yaml
+    outs:
+    - models/trained-model.ckpt
+
+  eval:
+    wdir: .
+    cmd: python eval.py
+    deps:
+    - splits/test.csv
+    - models/trained-model.ckpt
+    - eval.py

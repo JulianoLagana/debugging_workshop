@@ -1,0 +1,17 @@
+model:
+  input_dim: 69
+  hidden_dim: 50
+  lr: 0.0001
+
+data:
+  batch_size: 128
+
+trainer:
+  max_epochs: 50
+  accelerator: cpu
+  default_root_dir: "logs/my_run"
+  callbacks:
+    - class_path: lightning.pytorch.callbacks.ModelCheckpoint
+      init_args:
+        filename: trained-model
+        dirpath: models
