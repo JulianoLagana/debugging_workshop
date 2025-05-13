@@ -1,0 +1,65 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python preprocessing.py
+    deps:
+    - path: mushrooms.csv
+      hash: md5
+      md5: 944f4f609b03dacb50f4480ec4e212a5
+      size: 2896328
+    - path: preprocessing.py
+      hash: md5
+      md5: 4f5d949fb4cca41f1956c4af8ffbec8a
+      size: 2931
+    outs:
+    - path: splits/test.csv
+      hash: md5
+      md5: 723701340b3959fa82b838814ff901e6
+      size: 1181986
+    - path: splits/train.csv
+      hash: md5
+      md5: 2215e440580cf83e022e0b4540140758
+      size: 8266304
+    - path: splits/val.csv
+      hash: md5
+      md5: e9fb866f2c7d57a14a272d8e1b0f82ad
+      size: 2362415
+  train:
+    cmd: python train.py fit --config train_config.yaml
+    deps:
+    - path: splits/train.csv
+      hash: md5
+      md5: 2215e440580cf83e022e0b4540140758
+      size: 8266304
+    - path: splits/val.csv
+      hash: md5
+      md5: e9fb866f2c7d57a14a272d8e1b0f82ad
+      size: 2362415
+    - path: train.py
+      hash: md5
+      md5: 2f8c344678bbe9f795e0cb5d4874a5dd
+      size: 4915
+    - path: train_config.yaml
+      hash: md5
+      md5: 9fb7d684b65d8a89456919fe156e69bc
+      size: 306
+    outs:
+    - path: models/trained-model.ckpt
+      hash: md5
+      md5: 6b42e454f63dc0cab89dcf2039d85be0
+      size: 50544
+  eval:
+    cmd: python eval.py
+    deps:
+    - path: eval.py
+      hash: md5
+      md5: 5cc9711980567e39b812937ae33ff1a6
+      size: 1085
+    - path: models/trained-model.ckpt
+      hash: md5
+      md5: 6b42e454f63dc0cab89dcf2039d85be0
+      size: 50544
+    - path: splits/test.csv
+      hash: md5
+      md5: 723701340b3959fa82b838814ff901e6
+      size: 1181986
