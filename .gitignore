@@ -173,3 +173,4 @@ cython_debug/
 .coverage
 .htmlcov
 .vscode/settings.json
+.vscode/launch.json
