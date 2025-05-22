@@ -26,6 +26,7 @@ Install Poetry using the [official installer](https://python-poetry.org/docs/#in
 ```
 curl -sSL https://install.python-poetry.org | python3 -
 ```
+Note that this will use whichever Python version you have available under `python3` in your shell. If you run into problems double-check if this is the same version you installed in the previous step (e.g., `which python3` on Mac).
 
 Install the project
 ```
